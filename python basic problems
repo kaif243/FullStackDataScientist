@@ -1,0 +1,186 @@
+11.)n = int(input("Enter number: "))
+if n > 1:
+    for i in range(2, n):
+        if n % i == 0:
+            print("Not Prime")
+            break
+    else:
+        print("Prime")
+else:
+    print("Not Prime")
+
+
+12)a = [10, 40, 20, 50, 30]
+a.sort()
+print("Second largest:", a[-2])
+
+13)s = 0
+for i in range(1, 51):
+    if i % 2 == 0:
+        s = s + i
+print("Sum:", s)
+
+14)st = input("Enter string: ")
+u = 0
+l = 0
+for ch in st:
+    if ch.isupper():
+        u = u + 1
+    elif ch.islower():
+        l = l + 1
+print("Uppercase:", u)
+print("Lowercase:", l)
+
+
+15)n = int(input("Enter n: "))
+a, b = 0, 1
+for i in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
+
+
+16)s1 = input("Enter first: ")
+s2 = input("Enter second: ")
+if sorted(s1) == sorted(s2):
+    print("Anagram")
+else:
+    print("Not Anagram")
+
+
+17)n = int(input("Enter number: "))
+s = 0
+for i in range(1, n):
+    if n % i == 0:
+        s = s + i
+if s == n:
+    print("Perfect")
+else:
+    print("Not Perfect")
+
+
+18)m1 = int(input())
+m2 = int(input())
+m3 = int(input())
+m4 = int(input())
+m5 = int(input())
+per = (m1+m2+m3+m4+m5) / 5
+if per >= 90:
+    print("A")
+elif per >= 75:
+    print("B")
+elif per >= 50:
+    print("C")
+else:
+    print("Fail")
+
+
+19)for n in range(2, 101):
+    for i in range(2, n):
+        if n % i == 0:
+            break
+    else:
+        print(n, end=" ")
+
+
+20)st = input("Enter sentence: ")
+c = 0
+inword = False
+for ch in st:
+    if ch != " ":
+        if not inword:
+            c = c + 1
+            inword = True
+    else:
+        inword = False
+print("Words:", c)
+
+
+21)price = float(input("Enter price: "))
+age = int(input("Enter age: "))
+student = input("Student (yes/no): ")
+if student == "yes":
+    price = price * 0.8
+elif age >= 60:
+    price = price * 0.9
+print("Final price:", price)
+
+
+22)cart = int(input("Enter total: "))
+if cart > 500:
+    print("Pay:", cart)
+else:
+    print("Pay:", cart + 50)
+
+
+23)m = int(input("Enter marks: "))
+if m >= 90:
+    print("A")
+elif m >= 75:
+    print("B")
+elif m >= 50:
+    print("C")
+else:
+    print("Fail")
+
+
+24)bill = int(input("Enter bill: "))
+if bill < 500:
+    tip = bill * 0.05
+elif bill <= 1000:
+    tip = bill * 0.10
+else:
+    tip = bill * 0.15
+print("Tip:", tip)
+
+
+25)m = int(input("Enter months: "))
+cost1 = m * 500
+cost2 = (m//6)*2700 + (m%6)*500
+cost3 = (m//12)*5000 + (m%12)*500
+print("Cheapest:", min(cost1, cost2, cost3))
+
+
+26)total = int(input("Total classes: "))
+att = int(input("Attended: "))
+per = (att/total)*100
+if per >= 75:
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+
+27)amt = int(input("Enter amount: "))
+if amt % 100 == 0:
+    print("Transaction Successful")
+else:
+    print("Transaction Failed")
+
+
+28)t = int(input("Enter temp: "))
+if t > 35:
+    print("Too hot, stay indoors!")
+elif t >= 20:
+    print("Nice weather, go out!")
+else:
+    print("It’s cold, wear warm clothes!")
+
+
+29)d = int(input("Enter days late: "))
+if d <= 5:
+    print("Fine = 10")
+elif d <= 10:
+    print("Fine = 50")
+else:
+    print("Fine = 100")
+
+
+30)u = int(input("Enter units: "))
+if u <= 100:
+    bill = u * 5
+elif u <= 200:
+    bill = 100*5 + (u-100)*7
+else:
+    bill = 100*5 + 100*7 + (u-200)*10
+print("Bill:", bill)
+
+
